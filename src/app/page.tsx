@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
 import React from 'react'
@@ -19,11 +20,11 @@ const page = () => {
           </div>
         </div>
 
-        <img src="./s1.png" alt="" className='w-full object-cover h-[400px]' />
+        <img src="./s1.png" alt="" className='w-full object-cover h-[400px] rounded-[20px]' />
       </div>
 
       <div className='grid grid-cols-[1fr_1fr] mx-[11%] my-32 gap-20'>
-        <img src="./s2.png" alt="" className='w-full object-cover h-[400px]' />
+        <img src="./s2.png" alt="" className='w-full object-cover h-[400px] rounded-[20px]' />
 
         <div className='flex flex-col gap-8'>
           <p className='text-primary font-bold text-[36px] leading-10'>Eexily is your personal kitchen assistant</p>
@@ -46,12 +47,32 @@ const page = () => {
         </div>
 
         <div className='grid grid-cols-2 gap-20 items-center justify-center'>
-          <img src="./s3.png" alt="" />
-          <img src="./s4.png" alt="" />
+          <img src="./s3.png" alt="" className='rounded-[20px]' />
+          <img src="./s4.png" alt="" className='rounded-[20px]' />
         </div>
       </div>
 
       <HowItWorks />
+
+      <div className='grid grid-cols-[1fr_1.5fr] mx-[11%] my-32 gap-10'>
+        <div className='flex flex-col gap-3'>
+          <p className='text-primary font-bold text-[36px] leading-10'>Eexily is closer to you than you can imagine</p>
+          <div className='flex  gap-3 flex-col w-2/3'>
+            <p>Visit any of our outlet and experience the difference.</p>
+          </div>
+        </div>
+
+        <img src="./map.png" alt="" className='w-full object-cover h-[400px] rounded-[20px]' />
+      </div>
+
+      <div className='flex flex-col gap-5 items-center justify-center text-center'>
+        <h2 className='text-primary font-bold text-[36px] leading-10'>Ready to make cooking and life easy? </h2>
+          <p>“Join the Eexily family and experience the difference. Download the app today!"
+          </p>
+        <img src="./s5.png" alt="" />
+      </div>
+
+      <Footer />
 
     </div>
   )

@@ -1,7 +1,27 @@
-import React from 'react'
+"use client";
+import Link from 'next/link'
+import React, { useState } from 'react'
 import { HiChevronDown } from 'react-icons/hi'
 
 const Banner = () => {
+
+  const dropDown = [
+    {
+      title: "Driver Partner",
+      link: "/"
+    },
+    {
+      title: "Rider Partner",
+      link: "/"
+    },
+    {
+      title: "Gas Station Partner",
+      link: "/"
+    }
+  ]
+
+  const [showDrop, setShowDrop] = useState(false);
+
   return (
     <div className='bg-primary relative h-[100vh]'>
       <img src="./banner-mask.png" alt="" className='absolute w-full h-[100vh] object-cover' />
@@ -15,9 +35,25 @@ const Banner = () => {
 
           <div className='flex gap-5'>
             <button className='bg-white text-primary px-3 py-2 rounded-full'>Get Started</button>
-            <div className='flex text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full'>
+            <div onClick={()=> setShowDrop(!showDrop)} className='flex relative text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full cursor-pointer'>
               <p>Partner with us</p>
               <HiChevronDown />
+
+              {
+                showDrop &&
+                <div className="absolute top-12 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
+                {
+                  dropDown.map((item, i)=>{
+                    return(
+                      <Link href={item.link} className='text-sm '>
+                        {item.title}
+                      </Link>
+                    )
+                  })
+                }
+              </div>
+              }
+
             </div>
           </div>
         </div>
