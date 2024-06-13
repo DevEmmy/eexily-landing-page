@@ -15,7 +15,11 @@ const config: Config = {
       },
       colors: {
         primary: "#0054C2",
-        secondary: "#FFE500"
+        secondary: "#FFE500",
+        input: "rgba(217, 217, 217, 0.3)"
+      },
+      boxShadow: {
+        custom: "0 0 5px rgba(0, 0, 0, 0.1)"
       }
     },
   },
