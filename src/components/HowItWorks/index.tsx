@@ -18,7 +18,7 @@ const HowItWorks = () => {
     ]
   return (
     <div className='bg-primary px-[10%] flex flex-col gap-10 text-white my-20'>
-        <p className='my-10 text-center text-[24px] font-bold'>How it Works</p>
+        <p className='mt-20 text-center text-[24px] font-bold'>How it Works</p>
         <div className="grid grid-cols-[1fr_2fr_1fr] gap-10 items-end">
           {
             methods.map((item, i)=>{
