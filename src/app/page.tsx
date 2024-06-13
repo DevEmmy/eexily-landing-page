@@ -74,8 +74,6 @@ const page = () => {
         <img src="./s5.png" alt="" />
       </div>
 
-      <Footer />
-
     </div>
   )
 }

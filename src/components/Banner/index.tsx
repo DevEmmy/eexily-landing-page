@@ -43,32 +43,34 @@ const Banner = () => {
       />
       <div className="absolute z-10 w-full px-[5.7%] py-10">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-[32px] text-white font-extrabold">Eexily.</p>
-          </div>
+          <Link href={"/"}>
+            <div>
+              <p className='text-[32px] text-white font-extrabold'>Eexily.</p>
+            </div>
+          </Link>
 
-          <div className="flex gap-5">
-            <button className="bg-white text-primary px-3 py-2 rounded-full">
-              Get Started
-            </button>
-            <div
-              onClick={() => setShowDrop(!showDrop)}
-              className="flex relative text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full cursor-pointer"
-            >
+          <div className='flex gap-5'>
+            <Link href={"/get-started"}>
+              <button className='bg-white text-primary px-3 py-2 rounded-full'>Get Started</button>
+            </Link>
+            <div onClick={() => setShowDrop(!showDrop)} className='flex relative text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full cursor-pointer'>
               <p>Partner with us</p>
               <HiChevronDown />
 
               {showDrop && (
                 <div className="absolute top-12 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
-                  {dropDown.map((item, i) => {
-                    return (
-                      <Link href={item.link} className="text-sm ">
-                        {item.title}
-                      </Link>
-                    );
-                  })}
+                  {
+                    dropDown.map((item, i) => {
+                      return (
+                        <Link href={item.link} className='text-sm '>
+                          {item.title}
+                        </Link>
+                      )
+                    })
+                  }
                 </div>
-              )}
+              }
+
             </div>
           </div>
         </div>
