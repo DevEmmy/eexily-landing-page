@@ -26,11 +26,11 @@ const Banner = () => {
 
   return (
     <div className="bg-primary relative h-[100vh]">
-       <img
-          src="./banner-mask.png"
-          alt=""
-          className="absolute w-full h-[100vh]   object-cover"
-        />
+      <img
+        src="./banner-mask.png"
+        alt=""
+        className="absolute w-full h-[100vh]   object-cover"
+      />
       <img
         src="./star.png"
         alt=""
@@ -45,35 +45,34 @@ const Banner = () => {
         <div className="flex items-center justify-between">
           <Link href={"/"}>
             <div>
-              <p className='text-[32px] text-white font-extrabold'>Eexily.</p>
+              <p className="text-[32px] text-white font-extrabold">Eexily.</p>
             </div>
           </Link>
 
-          <div className='flex gap-5'>
+          <div className="flex gap-5">
             <Link href={"/get-started"}>
-              <button className='bg-white text-primary px-3 py-2 rounded-full'>Get Started</button>
+              <button className="bg-white text-primary px-3 py-2 rounded-full">
+                Get Started
+              </button>
             </Link>
-            <div onClick={() => setShowDrop(!showDrop)} className='flex relative text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full cursor-pointer'>
-
+            <div
+              onClick={() => setShowDrop(!showDrop)}
+              className="flex relative text-white bg-transparent gap-2 border-2 border-white px-5 py-2 rounded-full cursor-pointer"
+            >
               <p>Partner with us</p>
               <HiChevronDown />
 
               {showDrop && (
                 <div className="absolute top-12 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
-
-                  {
-                    dropDown.map((item, i) => {
-                      return (
-                        <Link href={item.link} className='text-sm '>
-                          {item.title}
-                        </Link>
-                      )
-                    })
-                  }
+                  {dropDown.map((item, i) => {
+                    return (
+                      <Link href={item.link} className="text-sm " key={i}>
+                        {item.title}
+                      </Link>
+                    );
+                  })}
                 </div>
-              }
-
-
+              )}
             </div>
           </div>
         </div>
