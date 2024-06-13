@@ -23,6 +23,9 @@ const page = () => {
     amount: "some",
   });
 
+  const closerRef = useRef(null);
+  const isCloserInView = useInView(closerRef, { amount: "some" });
+
   const slideTextRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -35,6 +38,14 @@ const page = () => {
     [0, 1],
     ["-100%", "50%"]
   );
+
+  const slideImageRef = useRef(null);
+  const { scrollYProgress: imageYProgress } = useScroll({
+    target: slideImageRef,
+    offset: ["start end", "end start"],
+  });
+
+  const slideInFromBottom = useTransform(imageYProgress, [0, 1], ["5%", "0%"]);
 
   return (
     <div>
@@ -188,20 +199,41 @@ const page = () => {
       <HowItWorks />
 
       <div className="grid grid-cols-[1fr_1.5fr] mx-[11%] my-32 gap-10">
-        <div className="flex flex-col gap-3">
+        <motion.div
+          ref={closerRef}
+          animate={{
+            rotateZ: isCloserInView ? 0 : 20,
+            transition: {
+              duration: 1,
+              ease: "easeOut",
+            },
+          }}
+          className="flex flex-col gap-3"
+        >
           <p className="text-primary font-bold text-[36px] leading-10">
             Eexily is closer to you than you can imagine
           </p>
           <div className="flex  gap-3 flex-col w-2/3">
             <p>Visit any of our outlet and experience the difference.</p>
           </div>
-        </div>
+        </motion.div>
 
-        <img
-          src="./map.png"
-          alt=""
-          className="w-full object-cover h-[400px] rounded-[20px]"
-        />
+        <motion.div
+          ref={closerRef}
+          animate={{
+            rotateZ: isCloserInView ? 0 : -20,
+            transition: {
+              duration: 1,
+              ease: "easeOut",
+            },
+          }}
+        >
+          <img
+            src="./map.png"
+            alt=""
+            className="w-full object-cover h-[400px] rounded-[20px]"
+          />
+        </motion.div>
       </div>
 
       <div className="flex flex-col gap-5 items-center justify-center text-center">
@@ -212,7 +244,9 @@ const page = () => {
           “Join the Eexily family and experience the difference. Download the
           app today!"
         </p>
-        <img src="./s5.png" alt="" />
+        <motion.div ref={slideImageRef} style={{ y: slideInFromBottom }}>
+          <img src="./s5.png" alt="" />
+        </motion.div>
       </div>
     </div>
   );
