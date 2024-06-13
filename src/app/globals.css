@@ -11,7 +11,7 @@ p, button{
 }
 
 .overlay{
-  background-color: #0054c287;
+  background-color: #0054c2cf;
   height: 400px;
   position: absolute;
   width: 100%;
@@ -20,4 +20,16 @@ p, button{
 
 .download > div{
   @apply rounded-xl p-3 flex gap-2 text-start items-center
+}
+
+.form-container > div{
+  @apply flex flex-col gap-2
+}
+
+.form-container > div > p > sup{
+  @apply text-red-500 font-bold
+}
+
+.form-container > div > input, textarea{
+  @apply border p-2 border-gray-300 rounded-lg w-full
 }

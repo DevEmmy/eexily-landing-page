@@ -7,15 +7,15 @@ const Banner2 = () => {
     const dropDown = [
         {
             title: "Driver Partner",
-            link: "/"
+            link: "/driver-partner"
         },
         {
             title: "Rider Partner",
-            link: "/"
+            link: "/rider-partner",
         },
         {
             title: "Gas Station Partner",
-            link: "/"
+            link: "/gas-station-partner"
         }
     ]
 

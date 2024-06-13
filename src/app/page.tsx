@@ -140,21 +140,15 @@ const page = () => {
 
       <div className="flex flex-col gap-8 items-center justify-center text-center">
         <motion.h2
-          style={{ x: slideInFromLeftHeader }}
-          className="text-primary font-bold text-[36px] leading-10"
+          // style={{ x: slideInFromLeftHeader }}
+          className="text-primary font-bold text-center text-[36px] leading-10"
         >
           Eexily powers businesses!
         </motion.h2>
         <div className=" flex gap-10 flex-col p-3 w-2/3">
           <motion.p
             ref={businessTextRef}
-            animate={{
-              x: isBusinessTextInView ? "0%" : "50%",
-              transition: {
-                duration: 1,
-                ease: "easeOut",
-              },
-            }}
+            
           >
             Never worry about running out of gas during peak hours for your
             kitchen, generators, or any other needs. Get reliable refills, track
