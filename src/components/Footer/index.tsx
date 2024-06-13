@@ -81,7 +81,7 @@ const Footer = () => {
             {
                 items.map((item, i) => {
                     return (
-                        <div className='flex flex-col gap-3'>
+                        <div key={i} className='flex flex-col gap-3'>
                             <p className='text-white font-bold'>{item.title}</p>
                             <div className='flex flex-col gap-3'>
                                 {
