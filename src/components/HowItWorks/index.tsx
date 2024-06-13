@@ -23,7 +23,7 @@ const HowItWorks = () => {
           {
             methods.map((item, i)=>{
               return(
-                <div className='flex justify-center items-center flex-col gap-2'>
+                <div key={i} className='flex justify-center items-center flex-col gap-2'>
                   <p className='p-2 font-bold w-fit rounded-full text-black size-[20px] text-[10px] flex justify-center items-center bg-white'>{i+1}</p>
                   <p className='text-center'>{item.text}</p>
 
