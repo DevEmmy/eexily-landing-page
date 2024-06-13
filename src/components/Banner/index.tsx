@@ -31,16 +31,36 @@ const Banner = () => {
         alt=""
         className="absolute w-full h-[100vh]   object-cover"
       />
-      <img
-        src="./star.png"
-        alt=""
+      <motion.div
+        animate={{
+          x: ["10%", "0%", "10%"],
+          y: ["-10%", "0%", "-10%"],
+          transition: {
+            duration: 2,
+            ease: "easeIn",
+            repeat: Infinity,
+          },
+        }}
         className="absolute z-10 top-[40vh] left-[20%]"
-      />
-      <img
-        src="./star.png"
-        alt=""
+      >
+        <img src="./star.png" alt="" className="" />
+      </motion.div>
+      <motion.div
+        animate={{
+          opacity: [1, 0.6, 1],
+          rotateZ: [0, 360],
+          scale: [1, 1.5, 1],
+          transition: {
+            duration: 4,
+            ease: "easeIn",
+            repeat: Infinity,
+          },
+        }}
         className="absolute z-10 top-[70vh] right-[10%]"
-      />
+      >
+        <img src="./star.png" alt="" className="" />
+      </motion.div>
+
       <div className="absolute z-10 w-full px-[5.7%] py-10">
         <div className="flex items-center justify-between">
           <Link href={"/"}>
@@ -80,10 +100,20 @@ const Banner = () => {
         <div className="flex flex-col mt-[20vh] w-4/6 m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
             <p>Are you tired of gas hassles too?</p>
-            <h2 className="text-[50px]">
+            <motion.h2
+              animate={{
+                scale: [1.0, 1.05, 1.0],
+                transition: {
+                  duration: 4,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                },
+              }}
+              className="text-[50px]"
+            >
               Skip the line, Order{" "}
               <span className="text-secondary">Online!</span>
-            </h2>
+            </motion.h2>
             <p className="font-normal w-4/5">
               With Eexily, you can now stay at home, know how much gas you have
               left,and order for a refill when you're running low without hassle
@@ -91,9 +121,21 @@ const Banner = () => {
             </p>
           </div>
 
-          <p className="text-center font-bold text-white text-[30px]">
+          <motion.p
+            animate={{
+              // rotateX: [0, 360],
+              transition: {
+                duration: 5,
+                ease: "easeIn",
+                repeat: Infinity,
+                type: "spring",
+                bounce: 0.9,
+              },
+            }}
+            className="text-center font-bold text-white text-[30px]"
+          >
             Life made Easy for <span className="text-secondary">You</span>
-          </p>
+          </motion.p>
         </div>
       </div>
     </div>
