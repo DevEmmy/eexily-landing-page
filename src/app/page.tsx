@@ -52,7 +52,8 @@ const page = () => {
       <Banner />
       <Hero />
 
-      <div className="grid grid-cols-[1fr_1fr] mx-[11%] my-32 gap-20">
+      <div className="flex  mx-[5.7%] py-40 justify-around relative">
+        <img src="./px.png" alt="" className="absolute left-0 bottom-0"/>
         <motion.div
           ref={struggleRef}
           animate={{
@@ -62,12 +63,12 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-8 w-1/3"
         >
-          <p className="text-primary font-bold text-[36px] leading-10">
+          <p className="text-primary font-bold text-[30px] leading-10">
             We Know the Struggle!
           </p>
-          <div className="bg-[#6782a534] flex  gap-3 flex-col p-3 w-2/3">
+          <div className="bg-[#6782a534] flex  gap-3 flex-col p-3 w-8/12">
             <p>
               Running out of gas is the worst! The stress, the wasted food,the
               scrambling to find a refill.
@@ -89,13 +90,14 @@ const page = () => {
             },
           }}
           ref={struggleRef}
-          className="w-full  h-[400px] rounded-[20px] overflow-hidden"
+          className="w-[53.66%]  h-[589px] rounded-[20px] "
         >
-          <img src="./s1.png" alt="" className="object-cover w-full h-full" />
+          <img src="./s1.png" alt="" className="object-cover rounded-[20px] h-full w-full" />
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-[1fr_1fr] mx-[11%] my-32 gap-20">
+      <div className="flex  mx-[5.7%] py-40 justify-around relative">
+      <img src="./px.png" alt="" className="absolute left-0 bottom-0 w-full"/>
         <motion.div
           ref={assistantRef}
           animate={{
@@ -105,9 +107,9 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="w-full h-[400px] rounded-[20px] overflow-hidden"
+          className="w-[53.66%]  h-[589px] rounded-[20px] "
         >
-          <img src="./s2.png" alt="" className="object-cover w-full h-full" />
+          <img src="./s2.png" alt="" className="object-cover rounded-[20px] h-full w-full" />
         </motion.div>
 
         <motion.div
@@ -119,12 +121,12 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-8 w-1/3"
         >
-          <p className="text-primary font-bold text-[36px] leading-10">
+          <p className="text-primary font-bold text-[30px] leading-10">
             Eexily is your personal kitchen assistant
           </p>
-          <div className="bg-[#6782a534] flex gap-3 flex-col p-3 w-2/3">
+          <div className="bg-[#ffc00315] flex gap-3 flex-col p-3 w-2/3">
             <p>
               We deliver your gas before it runs out, so you can cook without
               worry.
