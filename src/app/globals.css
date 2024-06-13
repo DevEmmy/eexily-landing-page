@@ -9,3 +9,15 @@ p, button{
 .bg-banner{
   background: url("/public/banner-mask.png"), linear-gradient(#0054C2, #0054C2);
 }
+
+.overlay{
+  background-color: #0054c287;
+  height: 400px;
+  position: absolute;
+  width: 100%;
+  @apply top-0 left-0
+}
+
+.download > div{
+  @apply rounded-xl p-3 flex gap-2 text-start items-center
+}
