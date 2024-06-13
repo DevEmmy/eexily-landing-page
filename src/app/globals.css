@@ -22,6 +22,14 @@ p, button{
   @apply top-0 left-0
 }
 
+.overlay2{
+  background-color: rgba(0, 84, 194, 0.85);
+  height: 400px;
+  position: absolute;
+  width: 100%;
+  @apply top-0 left-0
+}
+
 .download > div{
   @apply rounded-xl p-3 flex gap-2 text-start items-center
 }
