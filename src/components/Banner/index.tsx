@@ -62,7 +62,7 @@ const Banner = () => {
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
             <p>Are you tired of gas hassles too?</p>
             <h2 className='text-[50px]'>Skip the line, Order <span className='text-secondary'>Online!</span></h2>
-            <p className='font-normal w-4/5'>With Eexily, you can now stay at home, know how much gas you have left, and order for a refill when you're running low without hassle or extra fees! Tell your neighbors!</p>
+            <p className='font-normal w-4/5'>With Eexily, you can now stay at home, know how much gas you have left,and order for a refill when you're running low without hassle or extra fees! Tell your neighbors!</p>
           </div>
 
           <p className='text-center font-bold text-white text-[30px]'>Life made Easy for <span className='text-secondary'>You</span></p>
