@@ -57,7 +57,7 @@ const page = () => {
                     {
                         items.map((item, i)=>{
                             return(
-                                <li className='flex gap-2 list-disc items-center font-medium'>
+                                <li key={i} className='flex gap-2 list-disc items-center font-medium'>
                                     - {item.text}
                                     <img src={item.icon} alt="" className='size-[30px] object-cover'/>
                                 </li>
