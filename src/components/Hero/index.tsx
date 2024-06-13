@@ -21,18 +21,8 @@ const Hero = () => {
       text: "Cooking gas, Minus the drama",
     },
   ];
+  
 
-  const ref1 = React.useRef(null);
-  const isItem1InView = useInView(ref1, { amount: "all" });
-
-  const ref2 = React.useRef(null);
-  const isItem2InView = useInView(ref2, { amount: "all" });
-
-  const ref3 = React.useRef(null);
-  const isItem3InView = useInView(ref3, { amount: "all" });
-
-  const ref4 = React.useRef(null);
-  const isItem4InView = useInView(ref4, { amount: "all" });
 
   return (
     <div className="bg-[#F2F8FF] px-[10%] grid grid-cols-4 py-10 justify-center items-center">
@@ -51,7 +41,7 @@ const HeroItem: FC<{ image: string; text: string; index: number }> = ({
   index,
 }) => {
   const ref = useRef(null);
-  const isItemInView = useInView(ref, { amount: "all" });
+  const isItemInView = useInView(ref, { amount: "some" });
 
   return (
     <motion.div
