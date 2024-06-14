@@ -23,7 +23,17 @@ const config: Config = {
       },
       boxShadow: {
         custom: "0 0 5px rgba(0, 0, 0, 0.1)"
-      }
+      },
+      screens: {
+        'lt': { 'max' : '500px'},
+        'sm': { 'max': "400px" },
+        'sm1': { 'max': "840px" },
+        'md': { 'max': "800px" },
+        'md1': { 'max': "850px"},
+        'lg': { 'min': "2300px" },
+        'xl': { 'max': "1280px" },
+        "2xl": { 'max': "1536px" },
+      },
     },
   },
   plugins: [],

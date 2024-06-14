@@ -4,6 +4,7 @@ import { HiChevronDown } from "react-icons/hi";
 import Typewriter from 'typewriter-effect';
 
 import { motion, useInView, useScroll } from "framer-motion";
+import { RiMenu2Line, RiMenuLine } from "react-icons/ri";
 
 const Banner = () => {
   const dropDown = [
@@ -26,11 +27,11 @@ const Banner = () => {
   const slideRef = useRef(null);
 
   return (
-    <div className="bg-primary relative h-[150vh]">
+    <div className="bg-primary relative h-[150vh] md:h-[100vh]">
       <img
         src="./banner-mask.png"
         alt=""
-        className="absolute w-full h-[150vh]   object-cover"
+        className="absolute w-full h-[150vh] md:h-[100vh]  object-cover"
       />
       <motion.div
         animate={{
@@ -42,7 +43,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[43vh] left-[8%]"
+        className="absolute z-10 top-[55vh] left-[8%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -57,7 +58,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[70vh] right-[10%]"
+        className="absolute z-10 top-[70vh] md:top-[20vh] right-[10%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -66,12 +67,12 @@ const Banner = () => {
         <div className="flex items-center justify-between">
           <Link href={"/"}>
             <div className="flex gap-3 w-fit items-center">
-              <img src="./logo.png" alt="" />
-              <p className="text-[42px] text-white font-semibold">Eexily.</p>
+              <img src="./logo.png" alt="" className="md:w-[24px] object-cover"/>
+              <p className="text-[42px] md:text-[20px] text-white font-semibold">Eexily</p>
             </div>
           </Link>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 md:hidden">
             <Link href={"/get-started"}>
               <button className="bg-white font-semibold text-primary px-4 py-3 text-[20px] rounded-full">
                 Get Started
@@ -97,39 +98,35 @@ const Banner = () => {
               )}
             </div>
           </div>
+
+          <div className="hidden md:block">
+            <RiMenuLine className="text-white" size={30} />
+          </div>
+
         </div>
 
-        <div className="flex flex-col mt-[35vh] w-5/6 m-auto gap-32">
+        <div className="flex flex-col mt-[35vh] md:mt-[30vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
-            <p className="text-[30px]">Are you tired of gas hassles too?</p>
+            <p className="text-[30px] md:text-[16px]">Are you tired of gas hassles too?</p>
             <h2
 
-              className="text-[72px]"
+              className="text-[72px] md:text-[24px]"
             >
               Skip the line, Order{" "}
               <span className="text-secondary">Online!</span>
             </h2>
-            <p className="font-normal w-4/5">
+            <p className="font-normal text-sm">
               With Eexily, you can now stay at home, know how much gas you have
               left,and order for a refill when you're running low without hassle
               or extra fees! Tell your neighbors!
             </p>
           </div>
 
-          <motion.p
-            animate={{
-              // rotateX: [0, 360],
-              transition: {
-                duration: 5,
-                ease: "easeIn",
-                repeat: Infinity,
-                type: "spring",
-                bounce: 0.9,
-              },
-            }}
-            className="text-center font-bold text-white text-[30px] flex gap-2 items-center justify-center"
+          <div
+           
+            className="text-center font-bold text-white text-[30px] flex gap-2 items-center justify-center md:hidden"
           >
-            <p className="text-[30px]">Life made Easy for </p>
+            <p className="text-[30px] md:hidden">Life made Easy for </p>
 
             <div className="text-secondary">
               <Typewriter
@@ -140,7 +137,7 @@ const Banner = () => {
                 }}
               />
             </div>
-          </motion.p>
+          </div>
         </div>
       </div>
     </div>

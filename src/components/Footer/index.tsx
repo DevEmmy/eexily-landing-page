@@ -1,19 +1,6 @@
-import Link from "next/link";
-import React from "react";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import {
-  RiAppStoreFill,
-  RiAppStoreLine,
-  RiAppleFill,
-  RiFacebookBoxFill,
-  RiFacebookBoxLine,
-  RiFacebookCircleFill,
-  RiGooglePlayFill,
-  RiGooglePlayLine,
-  RiInstagramFill,
-  RiInstagramLine,
-  RiTwitterXFill,
-} from "react-icons/ri";
+import Link from 'next/link'
+import React from 'react'
+import { RiAppStoreFill, RiAppStoreLine, RiFacebookBoxLine, RiFacebookCircleFill, RiGooglePlayFill, RiGooglePlayLine, RiInstagramFill, RiInstagramLine, RiTwitterXFill } from 'react-icons/ri'
 
 const Footer = () => {
   const items = [
@@ -22,122 +9,134 @@ const Footer = () => {
       sub: [
         {
           title: "About",
-          link: "/",
+          link: "/"
         },
         {
           title: "Services",
-          link: "/",
+          link: "/"
         },
         {
           title: "Blog",
-          link: "/",
-        },
-      ],
-      last: "Terms & Conditions",
+          link: "/"
+        }
+      ]
     },
     {
-      title: "Partner with us",
+      title: 'Partner with us',
       sub: [
         {
           title: "Driver Partner",
-          link: "/",
+          link: "/"
         },
         {
           title: "Rider Partner",
-          link: "/",
+          link: "/"
         },
         {
           title: "Gas Station Partner",
-          link: "/",
-        },
-      ],
-      last: "Privacy notice",
+          link: "/"
+        }
+      ]
     },
     {
       title: "Support",
       sub: [
         {
           title: "FAQ",
-          link: "/",
+          link: "/"
         },
         {
           title: "Search Guide",
-          link: "/",
-        },
-      ],
-      last: "Cookie settings",
+          link: "/"
+        }
+      ]
     },
     {
       title: "Get in Touch",
       sub: [
         {
           title: "Help Center",
-          link: "/",
+          link: "/"
         },
         {
           title: "Contact",
-          link: "/",
-        },
-      ],
-      last: `© ${new Date().getFullYear()} Eexily.`
-    },
-  ];
+          link: "/"
+        }
+      ]
+    }
+  ]
   return (
-    <div className="bg-primary relative mt-48 text-white grid grid-cols-5 gap-10 items-start justify-between px-[5.6%] pt-36 pb-10">
-      <div className="absolute -top-20 w-2/3 bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%]">
-        <img src="./mp.png" alt="" />
-        <div className="flex flex-col gap-2">
-          <p className="font-bold text-[30px] text-primary">Subscribe</p>
-          <p className="text-sm">Subscribe to get timely updates and newsletter </p>
+    <div className='bg-primary relative mt-48 text-white grid md:flex md:flex-col grid-cols-5 md:grid-cols-none gap-10 items-start justify-between px-[5.6%] pt-32 pb-10'>
+
+      <div className="absolute -top-20 w-2/3 md:w-[90%] bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%] md:left-[5%]">
+        <img src="./mp.png" alt="" className='size-[100px] object-cover'/>
+
+        <div className="flex gap-5 md:flex-col ">
+          <div className="flex flex-col gap-2 md:gap-0">
+            <p className="font-bold text-[30px] md:text-[20px] text-primary">Subscribe</p>
+            <p className="text-sm">Subscribe to get timely updates and newsletter </p>
+          </div>
+
+          <input
+            type="email"
+            name=""
+            placeholder="E-mail address"
+            id=""
+            className="bg-input p-3 text-lg md:text-sm rounded-xl focus:outline-none w-[38%] md:w-full"
+          />
         </div>
 
-        <input
-          type="email"
-          name=""
-          placeholder="E-mail address"
-          id=""
-          className="bg-input p-3 text-lg rounded-xl focus:outline-none w-[38%]"
-        />
       </div>
 
-      {items.map((item, i) => {
-        return (
-          <div key={i} className="flex flex-col gap-4">
-            <p className="text-white font-semibold text-md  ">{item.title}</p>
-            <div className="flex flex-col gap-4">
-              {item.sub.map((linkItem, i) => {
-                return (
-                  <Link key={i} href={linkItem.link} className="text-sm w-fit">
-                    {linkItem.title}
-                  </Link>
-                );
-              })}
+      {
+        items.map((item, i) => {
+          return (
+            <div className='flex flex-col gap-3'>
+              <p className='text-white font-bold'>{item.title}</p>
+              <div className='flex flex-col gap-3'>
+                {
+                  item.sub.map((linkItem, i) => {
+                    return (
+                      <Link href={linkItem.link} className='text-sm'>
+                        {linkItem.title}
+                      </Link>
+                    )
+                  })
+                }
+              </div>
             </div>
-            <p className={`text-white text-sm ${i > 1 ? "mt-[76px]" : "mt-10"}`}>{item.last}</p>
-          </div>
-        );
-      })}
+          )
+        })
+      }
 
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="font-semibold text-md">Connect With Us</p>
-          <div className="flex text-[40px] w-[160px] justify-between items-center">
-            <RiFacebookBoxFill />
-            <FaSquareXTwitter />
+      <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-2'>
+          <p className='font-bold'>Connect With Us</p>
+          <div className="flex text-[24px]">
+            <RiFacebookCircleFill />
+            <RiTwitterXFill />
             <RiInstagramFill />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <p className="font-semibold text-md">Download the App</p>
-          <div className="flex text-[40px] w-[96px] justify-between items-center">
+        <div className='flex flex-col gap-2'>
+          <p className='font-bold'>Download the App</p>
+          <div className='flex text-[24px]'>
             <RiGooglePlayFill />
-            <RiAppleFill />
+            <RiAppStoreFill />
           </div>
+
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Footer;
+      <div className='border-t w-full pt-5 border-t-white col-span-5 grid grid-cols-5 md:grid-cols-2 text-center md:justify-center md:items-center justify-between md:gap-5'>
+        <p>Terms & Condition</p>
+        <p>Privacy Notice</p>
+        <p>Cookie settings</p>
+        <p>&copy;{new Date().getFullYear()} Eexily.</p>
+      </div>
+    </div>
+  )
+}
+
+export default Footer

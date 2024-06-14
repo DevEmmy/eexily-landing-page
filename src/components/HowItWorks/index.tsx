@@ -19,23 +19,23 @@ const HowItWorks = () => {
   return (
     <div className='bg-primary px-[10%] flex flex-col gap-10 text-white my-20'>
         <p className='mt-20 text-center text-[24px] font-bold'>How it Works</p>
-        <div className="grid grid-cols-[1fr_2fr_1fr] gap-10 items-end">
+        <div className="grid grid-cols-[1fr_2fr_1fr] md:grid-cols-none gap-10 items-end">
           {
             methods.map((item, i)=>{
               return(
                 <div key={i} className='flex justify-center items-center flex-col gap-2'>
-                  <p className='p-2 font-bold w-fit rounded-full text-black size-[20px] text-[10px] flex justify-center items-center bg-white'>{i+1}</p>
+                  <p className='px-2 font-bold w-fit rounded-full text-black  text-[16px] flex justify-center items-center bg-white'>{i+1}</p>
                   <p className='text-center'>{item.text}</p>
 
                   {
                     i == 1 ? 
-                    <div className="grid grid-cols-2 gap-2">
-                      <img src="./p1.png" alt="" className='h-[300px] object-cover'/>
-                      <img src="./p2.png" alt="" className='h-[300px] object-cover'/>
+                    <div className="grid grid-cols-2 md:grid-cols-none gap-2">
+                      <img src="./p1.png" alt="" className='h-[300px] md:h-full object-cover'/>
+                      <img src="./p2.png" alt="" className='h-[300px] md:h-full object-cover'/>
                     </div>
                     :
 
-                    <img src={item.img} alt="" className='h-[300px] object-cover' />
+                    <img src={item.img} alt="" className='h-[300px] md:h-full object-cover' />
                   }
                 </div>
               )

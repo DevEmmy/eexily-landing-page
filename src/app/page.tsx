@@ -50,10 +50,10 @@ const page = () => {
   return (
     <div>
       <Banner />
-      <Hero />
+       <Hero /> 
 
-      <div className="flex  mx-[5.7%] py-40 justify-around relative">
-        <img src="./px.png" alt="" className="absolute left-0 bottom-0"/>
+      <div className="flex md:flex-col  mx-[5.7%] py-40 justify-around relative md:gap-5">
+        <img src="./px.png" alt="" className="absolute left-0 bottom-0" />
         <motion.div
           ref={struggleRef}
           animate={{
@@ -63,12 +63,12 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="flex flex-col gap-8 w-1/3"
+          className="flex flex-col gap-8 w-1/3 md:w-full md:text-center"
         >
-          <p className="text-primary font-bold text-[30px] leading-10">
+          <p className="text-primary font-bold text-[30px] md:text-[25px] leading-10">
             We Know the Struggle!
           </p>
-          <div className="bg-[#6782a534] flex  gap-3 flex-col p-3 w-8/12">
+          <div className="bg-[#6782a534] flex  gap-3 flex-col p-3 w-8/12 md:w-full !text-start md:m-auto">
             <p className="">
               Running out of gas is the worst! The stress, the wasted food,the
               scrambling to find a refill.
@@ -90,14 +90,14 @@ const page = () => {
             },
           }}
           ref={struggleRef}
-          className="w-[53.66%]  h-[589px] rounded-[20px] "
+          className="w-[53.66%] md:w-full  h-[589px] md:h-full rounded-[20px] "
         >
           <img src="./s1.png" alt="" className="object-cover rounded-[20px] h-full w-full" />
         </motion.div>
       </div>
 
-      <div className="flex  mx-[5.7%] py-40 justify-around relative">
-      <img src="./px.png" alt="" className="absolute left-0 bottom-0 w-full"/>
+      <div className="flex  mx-[5.7%] py-40 justify-around relative md:gap-5 flex-col-reverse">
+        <img src="./px.png" alt="" className="absolute left-0 bottom-0 w-full" />
         <motion.div
           ref={assistantRef}
           animate={{
@@ -107,7 +107,7 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="w-[53.66%]  h-[589px] rounded-[20px] "
+          className="w-[53.66%] md:w-full h-[589px] md:h-full rounded-[20px] "
         >
           <img src="./s2.png" alt="" className="object-cover rounded-[20px] h-full w-full" />
         </motion.div>
@@ -121,12 +121,12 @@ const page = () => {
               ease: "easeOut",
             },
           }}
-          className="flex flex-col gap-8 w-1/3"
+          className="flex flex-col gap-8 w-1/3 md:w-full"
         >
-          <p className="text-primary font-bold text-[30px] leading-10">
+          <p className="text-primary font-bold text-[30px] md:text-[25px] leading-10">
             Eexily is your personal kitchen assistant
           </p>
-          <div className="bg-[#ffc00315] flex gap-3 flex-col p-3 w-2/3">
+          <div className="bg-[#ffc00315] flex gap-3 flex-col p-3 w-2/3 md:w-full">
             <p>
               We deliver your gas before it runs out, so you can cook without
               worry.
@@ -140,29 +140,29 @@ const page = () => {
         </motion.div>
       </div>
 
-      <div className="flex flex-col gap-8 items-center justify-center text-center">
+      <div className="flex flex-col gap-8 md:gap-2 items-center justify-center text-center mx-[5.7%]">
         <motion.h2
           // style={{ x: slideInFromLeftHeader }}
-          className="text-primary font-bold text-center text-[36px] leading-10"
+          className="text-primary font-bold text-center text-[36px] md:text-[25px] leading-10"
         >
           Eexily powers businesses!
         </motion.h2>
-        <div className=" flex gap-10 flex-col p-3 w-2/3 ">
+        <div className=" flex gap-10 md:gap-5 flex-col p-3 w-2/3 md:w-full ">
           <motion.p
             ref={businessTextRef}
-            className="text-[20px]"
+            className="text-[20px] md:text-sm"
           >
             Never worry about running out of gas during peak hours for your
             kitchen, generators, or any other needs. Get reliable refills, track
             usage across multiple locations, and streamline your operations.
           </motion.p>
-          <p className="text-[20px]">
-            <span className="text-primary font-bold">Contact us</span> to learn
+          <p className="text-[20px] md:text-sm">
+            <span className="text-primary font-bold ">Contact us</span> to learn
             more about our special business packages.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-20 items-center justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-none gap-20 md:gap-5 items-center justify-center">
           <motion.div
             ref={businessImagesRef}
             animate={{
@@ -194,7 +194,7 @@ const page = () => {
 
       <HowItWorks />
 
-      <div className="grid grid-cols-[1fr_1.5fr] mx-[11%] my-32 gap-10">
+      <div className="grid grid-cols-[1fr_1.5fr] mx-[5.7%] md:grid-cols-none my-32 gap-10">
         <motion.div
           ref={closerRef}
           animate={{
@@ -233,17 +233,19 @@ const page = () => {
       </div>
 
       <div className="flex flex-col gap-5 items-center justify-center text-center">
-        <h2 className="text-primary font-bold text-[36px] leading-10">
-          Ready to make cooking and life easy?{" "}
-        </h2>
-        <p>
-          “Join the Eexily family and experience the difference. Download the
-          app today!"
-        </p>
+        <div className="mx-[5.7%]">
+          <h2 className="text-primary font-bold text-[36px] md:text-[25px] leading-10">
+            Ready to make cooking and life easy?{" "}
+          </h2>
+          <p>
+            “Join the Eexily family and experience the difference. Download the
+            app today!"
+          </p>
+        </div>
         <motion.div ref={slideImageRef} style={{ y: slideInFromBottom }}>
           <img src="./s5.png" alt="" />
         </motion.div>
-      </div>
+      </div> 
     </div>
   );
 };
