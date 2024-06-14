@@ -85,7 +85,7 @@ const Banner = () => {
             </Link>
             <div
               onClick={() => setShowDrop(!showDrop)}
-              className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-6 py-3 rounded-full cursor-pointer"
+              className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-4 py-3 rounded-full cursor-pointer"
             >
               <p className="text-[20px] font-semibold">Partner with us</p>
               <HiChevronDown size={24} />
