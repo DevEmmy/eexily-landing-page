@@ -48,7 +48,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[15vh] left-[8%] md:size-[40px]"
+        className="absolute z-10 top-[45vh] md:top-[15vh] left-[8%] md:size-[40px]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
