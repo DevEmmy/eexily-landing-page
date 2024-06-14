@@ -27,11 +27,16 @@ const Banner = () => {
   const slideRef = useRef(null);
 
   return (
-    <div className="bg-primary relative h-[150vh] md:h-[100vh]">
+    <div className="bg-primary relative h-[150vh] md:h-[668px]">
       <img
         src="./banner-mask.png"
         alt=""
-        className="absolute w-full h-[150vh] md:h-[100vh]  object-cover"
+        className="absolute w-full h-[150vh] md:h-[668px] md:hidden object-cover"
+      />
+      <img
+        src="./mobile-banner-mask.png"
+        alt=""
+        className="absolute w-full h-[150vh] md:h-[668px] hidden md:block object-cover"
       />
       <motion.div
         animate={{
@@ -43,7 +48,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[55vh] left-[8%]"
+        className="absolute z-10 top-[15vh] left-[8%] md:size-[40px]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -51,14 +56,14 @@ const Banner = () => {
         animate={{
           opacity: [1, 0.6, 1],
           rotateZ: [0, 360],
-          scale: [1, 1.5, 1],
+          scale: [1, 1.2, 1],
           transition: {
             duration: 4,
             ease: "easeIn",
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[70vh] md:top-[20vh] right-[10%]"
+        className="absolute z-10 top-[70vh] md:top-[10vh] md:size-[50px] right-[10%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -105,17 +110,17 @@ const Banner = () => {
 
         </div>
 
-        <div className="flex flex-col mt-[35vh] md:mt-[30vh] w-full m-auto gap-32">
+        <div className="flex flex-col mt-[35vh] md:mt-[10vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
-            <p className="text-[30px] md:text-[16px]">Are you tired of gas hassles too?</p>
+            <p className="text-[30px] md:text-[14px]">Are you tired of gas hassles too?</p>
             <h2
 
-              className="text-[72px] md:text-[24px]"
+              className="text-[72px] md:text-[22px]"
             >
               Skip the line, Order{" "}
               <span className="text-secondary">Online!</span>
             </h2>
-            <p className="font-normal text-sm">
+            <p className="font-normal text-xs">
               With Eexily, you can now stay at home, know how much gas you have
               left,and order for a refill when you're running low without hassle
               or extra fees! Tell your neighbors!
