@@ -87,7 +87,7 @@ const Banner = () => {
               onClick={() => setShowDrop(!showDrop)}
               className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-6 py-3 rounded-full cursor-pointer"
             >
-              <p className="text-[24px] font-semibold">Partner with us</p>
+              <p className="text-[20px] font-semibold">Partner with us</p>
               <HiChevronDown size={24} />
 
               {showDrop && (
@@ -120,7 +120,7 @@ const Banner = () => {
               Skip the line, Order{" "}
               <span className="text-secondary">Online!</span>
             </h2>
-            <p className="font-normal text-xs">
+            <p className="font-normal text-[16px] md:text-xs w-2/3 md:w-full">
               With Eexily, you can now stay at home, know how much gas you have
               left,and order for a refill when you're running low without hassle
               or extra fees! Tell your neighbors!
