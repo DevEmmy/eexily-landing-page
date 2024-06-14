@@ -54,13 +54,13 @@ const Banner2 = () => {
           </div>
         </Link>
 
-        <div className="flex gap-5">
+        {/* <div className="flex gap-5">
           <div
             ref={dropdownRef}
             onClick={() => setShowDrop(!showDrop)}
             className="flex relative text-white bg-transparent gap-1 border-2 border-white px-5 py-2 rounded-full cursor-pointer"
           >
-            <p className="text-[18px] font-medium">Partner with us</p>
+            <p className="">Partner with us</p>
             <HiChevronDown
               className={`size-[24px] transition-all duration-300 ease-out ${
                 showDrop ? "rotate-180" : "rotate-0"
@@ -86,6 +86,26 @@ const Banner2 = () => {
                 })}
             </div>
           </div>
+        </div> */}
+
+        <div
+          onClick={() => setShowDrop(!showDrop)}
+          className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-6 py-3 rounded-full cursor-pointer"
+        >
+          <p className="text-[24px] font-semibold">Partner with us</p>
+          <HiChevronDown size={24} />
+
+          {showDrop && (
+            <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
+              {dropDown.map((item, i) => {
+                return (
+                  <Link href={item.link} className="text-[20px]" key={i}>
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 

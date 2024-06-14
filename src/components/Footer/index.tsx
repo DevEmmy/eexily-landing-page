@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import {
   RiAppStoreFill,
   RiAppStoreLine,
+  RiAppleFill,
+  RiFacebookBoxFill,
   RiFacebookBoxLine,
   RiFacebookCircleFill,
   RiGooglePlayFill,
@@ -81,11 +84,11 @@ const Footer = () => {
   ];
   return (
     <div className="bg-primary relative mt-48 text-white grid grid-cols-5 gap-10 items-start justify-between px-[5.6%] pt-36 pb-10">
-      <div className="absolute -top-20 w-2/3 bg-white shadow-custom rounded-3xl flex gap-5 text-black items-center py-3 left-[16.67%]">
+      <div className="absolute -top-20 w-2/3 bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%]">
         <img src="./mp.png" alt="" />
         <div className="flex flex-col gap-2">
           <p className="font-bold text-[30px] text-primary">Subscribe</p>
-          <p className="text-lg">Subscribe to get timely updates and newsletter </p>
+          <p className="text-sm">Subscribe to get timely updates and newsletter </p>
         </div>
 
         <input
@@ -118,18 +121,18 @@ const Footer = () => {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-md">Connect With Us</p>
-          <div className="flex text-[32px] w-[160px] justify-between items-center">
-            <RiFacebookCircleFill />
-            <RiTwitterXFill />
+          <div className="flex text-[40px] w-[160px] justify-between items-center">
+            <RiFacebookBoxFill />
+            <FaSquareXTwitter />
             <RiInstagramFill />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-md">Download the App</p>
-          <div className="flex text-[32px] w-[96px] justify-between items-center">
+          <div className="flex text-[40px] w-[96px] justify-between items-center">
             <RiGooglePlayFill />
-            <RiAppStoreFill />
+            <RiAppleFill />
           </div>
         </div>
       </div>

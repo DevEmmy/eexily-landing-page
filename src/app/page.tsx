@@ -69,7 +69,7 @@ const page = () => {
             We Know the Struggle!
           </p>
           <div className="bg-[#6782a534] flex  gap-3 flex-col p-3 w-8/12">
-            <p>
+            <p className="">
               Running out of gas is the worst! The stress, the wasted food,the
               scrambling to find a refill.
             </p>
@@ -147,16 +147,16 @@ const page = () => {
         >
           Eexily powers businesses!
         </motion.h2>
-        <div className=" flex gap-10 flex-col p-3 w-2/3">
+        <div className=" flex gap-10 flex-col p-3 w-2/3 ">
           <motion.p
             ref={businessTextRef}
-            
+            className="text-[20px]"
           >
             Never worry about running out of gas during peak hours for your
             kitchen, generators, or any other needs. Get reliable refills, track
             usage across multiple locations, and streamline your operations.
           </motion.p>
-          <p>
+          <p className="text-[20px]">
             <span className="text-primary font-bold">Contact us</span> to learn
             more about our special business packages.
           </p>

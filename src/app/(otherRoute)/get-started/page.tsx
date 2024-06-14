@@ -84,7 +84,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr_1.5fr] gap-10 px-[10%]">
+      <div className="grid grid-cols-[1fr_1.5fr] gap-10 px-[10%] items-start">
         <ul className="!list-disc flex flex-col gap-12 justify-center">
           {items.map((item, i) => {
             return (

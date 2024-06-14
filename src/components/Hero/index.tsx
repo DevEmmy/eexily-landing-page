@@ -58,7 +58,7 @@ const HeroItem: FC<{ image: string; text: string; index: number }> = ({
       className="flex flex-col items-center justify-center"
     >
       <img src={image} alt="" />
-      <p className="w-1/2 text-center">{text}</p>
+      <p className="w-2/3 font-light text-center text-[20px]">{text}</p>
     </motion.div>
   );
 };
