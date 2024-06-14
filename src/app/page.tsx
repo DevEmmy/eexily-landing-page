@@ -217,7 +217,7 @@ const page = () => {
         <motion.div
           ref={closerRef}
           animate={{
-            rotateZ: isCloserInView ? 0 : -20,
+            // rotateZ: isCloserInView ? 0 : -20,
             transition: {
               duration: 1,
               ease: "easeOut",

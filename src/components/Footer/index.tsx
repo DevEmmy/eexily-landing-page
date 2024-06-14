@@ -129,7 +129,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='border-t w-full pt-5 border-t-white col-span-5 grid grid-cols-5 md:grid-cols-2 text-center md:justify-center md:items-center justify-between md:gap-5'>
+      <div className='md:border-t w-full pt-5 md:border-t-white col-span-5 grid grid-cols-5 md:grid-cols-2 md:text-center md:justify-center md:items-center justify-between md:gap-5'>
         <p>Terms & Condition</p>
         <p>Privacy Notice</p>
         <p>Cookie settings</p>
