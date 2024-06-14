@@ -96,7 +96,7 @@ const page = () => {
         </motion.div>
       </div>
 
-      <div className="flex  mx-[5.7%] py-40 justify-around relative md:gap-5 flex-col-reverse">
+      <div className="flex  mx-[5.7%] py-40 justify-around relative md:gap-5 md:flex-col-reverse">
         <img src="./px.png" alt="" className="absolute left-0 bottom-0 w-full" />
         <motion.div
           ref={assistantRef}
