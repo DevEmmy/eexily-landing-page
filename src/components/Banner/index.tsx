@@ -77,7 +77,7 @@ const Banner = () => {
             </div>
           </Link>
 
-          <div className="flex gap-5 md:hidden">
+          <div className="flex gap-5 md:hidden items-center">
             <Link href={"/get-started"}>
               <button className="bg-white font-semibold text-primary px-4 py-3 text-[20px] rounded-full">
                 Get Started
@@ -85,9 +85,9 @@ const Banner = () => {
             </Link>
             <div
               onClick={() => setShowDrop(!showDrop)}
-              className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-4 py-3 rounded-full cursor-pointer"
+              className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-4 py-2 rounded-full cursor-pointer"
             >
-              <p className="text-[20px] font-semibold">Partner with us</p>
+              <p className="text-[20px] p-0 font-semibold">Partner with us</p>
               <HiChevronDown size={24} />
 
               {showDrop && (
