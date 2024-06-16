@@ -58,6 +58,7 @@ const page = () => {
           ref={struggleRef}
           animate={{
             x: isStruggleInView ? "0%" : "-20%",
+            opacity: !isStruggleInView ? "0" : "1",
             transition: {
               duration: 1,
               ease: "easeOut",
@@ -84,6 +85,7 @@ const page = () => {
         <motion.div
           animate={{
             x: isStruggleInView ? "0%" : "20%",
+            opacity: !isStruggleInView ? "0" : "1",
             transition: {
               duration: 1,
               ease: "easeOut",
@@ -102,6 +104,7 @@ const page = () => {
           ref={assistantRef}
           animate={{
             y: isAssistantInView ? "0%" : "-20%",
+            opacity: !isAssistantInView ? "0" : "1",
             transition: {
               duration: 1,
               ease: "easeOut",
@@ -116,6 +119,7 @@ const page = () => {
           ref={assistantRef}
           animate={{
             y: isAssistantInView ? "0%" : "20%",
+            opacity: !isAssistantInView ? "0" : "1",
             transition: {
               duration: 1,
               ease: "easeOut",
@@ -166,7 +170,7 @@ const page = () => {
           <motion.div
             ref={businessImagesRef}
             animate={{
-              opacity: isBusinessImagesInView ? 1 : 0.8,
+              opacity: !isBusinessImagesInView ? 1 : 0.8,
               scale: isBusinessImagesInView ? 1 : 0.5,
               transition: {
                 duration: 1,
@@ -179,7 +183,7 @@ const page = () => {
           <motion.div
             ref={businessImagesRef}
             animate={{
-              opacity: isBusinessImagesInView ? 1 : 0.8,
+              opacity: !isBusinessImagesInView ? 1 : 0.8,
               scale: isBusinessImagesInView ? 1 : 0.5,
               transition: {
                 duration: 1,

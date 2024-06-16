@@ -42,7 +42,7 @@ const HowItWorks = () => {
                   i == 1 ?
                     <div className="grid grid-cols-2 md:grid-cols-none gap-2">
                       <img src="./p1.png" alt="" className='h-[300px] md:h-full object-cover' />
-                      <img src="./p2.png" alt="" className='h-[300px] md:h-full object-cover' />
+                      <img src="./p2.png" alt="" className='h-[300px] m-auto md:h-full object-cover' />
                     </div>
                     :
 

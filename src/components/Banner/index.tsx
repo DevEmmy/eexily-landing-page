@@ -27,12 +27,12 @@ const Banner = () => {
   const slideRef = useRef(null);
 
   return (
-    <div className="bg-primary relative h-[130vh] md:h-[457px]">
+    <div className="bg-primary relative h-[130vh] md:h-[500px]">
 
       <img
         src="./wirl.png"
         alt=""
-        className="absolute w-full mix-blend-lighten h-[150vh] md:h-[457px] object-cover"
+        className="absolute w-full mix-blend-lighten h-[150vh] md:h-[500px] object-cover"
       />
       <img
         src="./girls.png"
