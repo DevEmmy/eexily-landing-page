@@ -90,7 +90,7 @@ const page = () => {
             },
           }}
           ref={struggleRef}
-          className="w-[53.66%] md:w-full  h-[589px] md:h-full rounded-[20px] "
+          className="w-[53.66%] md:w-full  h-[589px] md:h-full rounded-[20px]"
         >
           <img src="./s1.png" alt="" className="object-cover rounded-[20px] h-full w-full" />
         </motion.div>
@@ -132,7 +132,7 @@ const page = () => {
               worry.
             </p>
             <p>
-              Plus, our app makes iteasy to track your usage,schedule refills,
+              Plus, our app makes it easy to track your usage,schedule refills,
               and get cooking inspiration. It even saves you from burning your
               food!"
             </p>

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { HiChevronDown } from "react-icons/hi";
@@ -43,14 +44,14 @@ const Banner2 = () => {
     <div className="h-[400px] relative border-b-8 border-b-secondary">
       <div className="absolute top-0 left-0 -z-10 w-full">
         <div className="overlay2" />
-        <img src="./b2.png" alt="" className=" w-full h-[400px] object-cover" />
+        <Image unoptimized width={0} height={0} src="/./b2.png" alt="" className=" w-full h-[400px] object-cover" />
       </div>
 
       <div className="flex items-center justify-between z-30 px-[5.7%] py-10">
         <Link href={"/"}>
           <div className="flex gap-3 w-fit items-center">
-            <img src="./logo.png" alt="" />
-            <p className="text-[42px] text-white font-semibold">Eexily.</p>
+            <Image width={0} height={100} className="size-[40px]" unoptimized src="/./logo.png" alt="" />
+            <p className="text-[42px] text-white font-semibold">Eexily</p>
           </div>
         </Link>
 
@@ -90,16 +91,16 @@ const Banner2 = () => {
 
         <div
           onClick={() => setShowDrop(!showDrop)}
-          className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-6 py-3 rounded-full cursor-pointer"
+          className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-4 py-2 rounded-full cursor-pointer"
         >
-          <p className="text-[24px] font-semibold">Partner with us</p>
+          <p className="text-[20px] font-semibold">Partner with us</p>
           <HiChevronDown size={24} />
 
           {showDrop && (
             <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
               {dropDown.map((item, i) => {
                 return (
-                  <Link href={item.link} className="text-[20px]" key={i}>
+                  <Link href={item.link} className="text-[16px]" key={i}>
                     {item.title}
                   </Link>
                 );

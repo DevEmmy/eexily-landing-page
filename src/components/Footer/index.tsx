@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { RiAppStoreFill, RiAppStoreLine, RiFacebookBoxLine, RiFacebookCircleFill, RiGooglePlayFill, RiGooglePlayLine, RiInstagramFill, RiInstagramLine, RiTwitterXFill } from 'react-icons/ri'
@@ -69,7 +70,7 @@ const Footer = () => {
     <div className='bg-primary relative mt-48 text-white grid md:flex md:flex-col grid-cols-5 md:grid-cols-none gap-10 items-start justify-between px-[5.6%] pt-32 pb-10'>
 
       <div className="absolute -top-20 w-2/3 md:w-[90%] bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%] md:left-[5%]">
-        <img src="./mp.png" alt="" className='size-[100px] object-cover'/>
+        <Image unoptimized width={0} height={0} src="/./mp.png" alt="" className='size-[100px] object-cover'/>
 
         <div className="flex gap-5 md:flex-col ">
           <div className="flex flex-col gap-2 md:gap-0">

@@ -27,17 +27,26 @@ const Banner = () => {
   const slideRef = useRef(null);
 
   return (
-    <div className="bg-primary relative h-[150vh] md:h-[668px]">
+    <div className="bg-primary relative h-[130vh] md:h-[457px]">
+
       <img
-        src="./banner-mask.png"
+        src="./wirl.png"
         alt=""
-        className="absolute w-full h-[150vh] md:h-[668px] md:hidden object-cover"
+        className="absolute w-full mix-blend-lighten h-[150vh] md:h-[457px] object-cover"
       />
       <img
-        src="./mobile-banner-mask.png"
+        src="./girls.png"
         alt=""
-        className="absolute w-full h-[150vh] md:h-[668px] hidden md:block object-cover"
+        className="absolute w-[80%] md:hidden left-[10%] z-[99] bottom-0  object-cover"
       />
+
+      <img
+        src="./girls-mobile.png"
+        alt=""
+        className="absolute h-[245px] hidden md:block w-[80%] left-[10%] z-[99] bottom-0  object-contain"
+      />
+
+
       <motion.div
         animate={{
           x: ["10%", "0%", "10%"],
@@ -48,7 +57,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[45vh] md:top-[15vh] left-[8%] md:size-[40px]"
+        className="absolute z-[100] top-[45vh] md:top-[35vh] left-[8%] md:size-[30px]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -63,7 +72,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-10 top-[70vh] md:top-[10vh] md:size-[50px] right-[10%]"
+        className="absolute z-[100] top-[70vh] md:top-[10vh] md:size-[30px] right-[10%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -72,7 +81,7 @@ const Banner = () => {
         <div className="flex items-center justify-between">
           <Link href={"/"}>
             <div className="flex gap-3 w-fit items-center">
-              <img src="./logo.png" alt="" className="md:w-[24px] object-cover"/>
+              <img src="./logo.png" alt="" className="md:w-[24px] object-cover" />
               <p className="text-[42px] md:text-[20px] text-white font-semibold">Eexily</p>
             </div>
           </Link>
@@ -94,7 +103,7 @@ const Banner = () => {
                 <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
                   {dropDown.map((item, i) => {
                     return (
-                      <Link href={item.link} className="text-[20px] " key={i}>
+                      <Link href={item.link} className="text-[16px] " key={i}>
                         {item.title}
                       </Link>
                     );
@@ -110,7 +119,7 @@ const Banner = () => {
 
         </div>
 
-        <div className="flex flex-col mt-[35vh] md:mt-[10vh] w-full m-auto gap-32">
+        <div className="flex flex-col mt-[15vh] md:mt-[5vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
             <p className="text-[30px] md:text-[14px]">Are you tired of gas hassles too?</p>
             <h2
@@ -122,13 +131,13 @@ const Banner = () => {
             </h2>
             <p className="font-normal text-[16px] md:text-xs w-2/3 md:w-full">
               With Eexily, you can now stay at home, know how much gas you have
-              left,and order for a refill when you're running low without hassle
+              left, and order for a refill when you're running low without hassle
               or extra fees! Tell your neighbors!
             </p>
           </div>
 
           <div
-           
+
             className="text-center font-bold text-white text-[30px] flex gap-2 items-center justify-center md:hidden"
           >
             <p className="text-[30px] md:hidden">Life made Easy for </p>
