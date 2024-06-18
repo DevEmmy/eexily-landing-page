@@ -28,7 +28,7 @@ const Nav = () => {
         }
     ]
     return (
-        <div className='absolute top-0 left-0 bg-white z-[100]  w-1/2 rounded-r-3xl'>
+        <div className='hidden md:block absolute top-0 left-0 bg-white z-[100]  w-1/2 rounded-r-3xl'>
             <div className='p-5'>
                 <div className="logo">
                     <Image src={"/./logo2.png"} width={30} height={30} alt='logo' />
