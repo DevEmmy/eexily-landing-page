@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 import { motion, useInView, useScroll } from "framer-motion";
 import { RiMenu2Line, RiMenuLine } from "react-icons/ri";
+import Nav from "./Nav";
 
 const Banner = () => {
   const dropDown = [
@@ -43,7 +44,7 @@ const Banner = () => {
       <img
         src="./girls-mobile.png"
         alt=""
-        className="absolute h-[245px] hidden md:block w-[80%] left-[10%] z-[99] bottom-0  object-contain"
+        className="absolute h-[245px] hidden md:block w-[80%] left-[10%] bottom-0  object-contain"
       />
 
 
@@ -57,7 +58,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-[100] top-[45vh] md:top-[35vh] left-[8%] md:size-[30px]"
+        className="absolute top-[45vh] md:top-[35vh] left-[8%] md:size-[30px]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -72,7 +73,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-[100] top-[70vh] md:top-[10vh] md:size-[30px] right-[10%]"
+        className="absolute z-[99] top-[70vh] md:top-[10vh] md:size-[30px] right-[10%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -115,6 +116,8 @@ const Banner = () => {
 
           <div className="hidden md:block">
             <RiMenuLine className="text-white" size={30} />
+
+            <Nav />
           </div>
 
         </div>

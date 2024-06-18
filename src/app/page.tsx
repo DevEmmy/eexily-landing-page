@@ -170,7 +170,7 @@ const page = () => {
           <motion.div
             ref={businessImagesRef}
             animate={{
-              opacity: !isBusinessImagesInView ? 1 : 0.8,
+              opacity: !isBusinessImagesInView ? 1 : 1,
               scale: isBusinessImagesInView ? 1 : 0.5,
               transition: {
                 duration: 1,
@@ -183,7 +183,7 @@ const page = () => {
           <motion.div
             ref={businessImagesRef}
             animate={{
-              opacity: !isBusinessImagesInView ? 1 : 0.8,
+              opacity: !isBusinessImagesInView ? 1 : 1,
               scale: isBusinessImagesInView ? 1 : 0.5,
               transition: {
                 duration: 1,
