@@ -2,9 +2,9 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='w-2/3 m-auto'>
-            <p className='text-gray-700 mb-5 font-bold text-end'>Rider Partner <span className='text-primary'>/Sign up</span></p>
-            <div className="grid grid-cols-2 gap-5 border-2 border-gray-300 rounded-2xl p-10  form-container">
+        <div className='w-2/3 md:w-[90%] m-auto'>
+            <p className='text-gray-700 mb-5 md:mb-2 font-bold text-end'>Rider Partner <span className='text-primary'>/Sign up</span></p>
+            <div className="grid grid-cols-2   md:flex md:flex-col gap-5 border-2 border-gray-300 rounded-2xl p-10 md:p-5 form-container">
                 <div>
                     <p>Full Name <sup>*</sup></p>
                     <input type="text" />

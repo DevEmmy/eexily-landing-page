@@ -16,11 +16,15 @@ p, button{
 
 }
 
-/* @media(max-width: 800px) {
+@media(max-width: 800px) {
   .bg-banner{
     background: url("/public/mobile-banner-mask.png"), linear-gradient(#0054C2, #0054C2);
   }
-} */
+
+  .overlay2{
+    height: 237px;
+  }
+}
 
 .overlay{
   background-color: #0054c2cf;
@@ -44,7 +48,11 @@ p{
 }
 
 .download > div{
-  @apply rounded-xl p-3 flex gap-2 text-start items-center
+  @apply rounded-xl p-3 md:p-2 md:gap-2 flex gap-2 text-start items-center md:w-fit leading-none
+}
+
+.download > div> div > p{
+  @apply md:leading-none
 }
 
 .form-container > div{

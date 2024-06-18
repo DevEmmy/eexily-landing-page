@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div  className='flex flex-col gap-32'>
+    <div  className='flex flex-col gap-32 md:gap-10'>
         <Banner2 />
         {children}
     </div>

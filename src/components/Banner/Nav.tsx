@@ -39,7 +39,7 @@ const Nav = () => {
                     {
                         navItems.map((item, i) => {
                             return (
-                                <Link href={item.link} key={i}  className='flex gap-3 items-center text-[12px] hover:text-primary'>
+                                <Link href={item.link} key={i} className='flex gap-3 items-center text-[12px] hover:text-primary'>
                                     {item.icon}
                                     <p>{item.title}</p>
                                 </Link>
@@ -50,7 +50,9 @@ const Nav = () => {
             </div>
 
             <div className='flex bg-[#FFF] items-center justify-center py-10 rounded-br-3xl px-5'>
-                <button className='py-3 px-5 rounded-md text-white font-bold text-[12px] bg-primary w-full'>Get Started</button>
+                <Link href={"/get-started"}>
+                    <button className='py-3 px-5 rounded-md text-white font-bold text-[12px] bg-primary w-full'>Get Started</button>
+                </Link>
             </div>
 
         </div>

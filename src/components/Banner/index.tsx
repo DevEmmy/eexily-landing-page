@@ -6,28 +6,10 @@ import Typewriter from 'typewriter-effect';
 import { motion, useInView, useScroll } from "framer-motion";
 import { RiMenu2Line, RiMenuLine } from "react-icons/ri";
 import Nav from "./Nav";
+import MainNav from "./MainNav";
 
 const Banner = () => {
-  const dropDown = [
-    {
-      title: "Driver Partner",
-      link: "/driver-partner"
-    },
-    {
-      title: "Rider Partner",
-      link: "/rider-partner",
-    },
-    {
-      title: "Gas Station Partner",
-      link: "/gas-station-partner"
-    },
-  ];
-
-  const [showDrop, setShowDrop] = useState(false);
-
-  const slideRef = useRef(null);
-
-  const [showNav, setShowNav] = useState(false)
+  
 
   return (
     <div className="bg-primary relative h-[130vh] md:h-[500px]">
@@ -81,62 +63,7 @@ const Banner = () => {
       </motion.div>
 
       <div className="absolute z-10 w-full px-[5.7%] py-10">
-        <div className="flex items-center justify-between">
-          <Link href={"/"}>
-            <div className="flex gap-3 w-fit items-center">
-              <img src="./logo.png" alt="" className="md:w-[24px] object-cover" />
-              <p className="text-[42px] md:text-[20px] text-white font-semibold">Eexily</p>
-            </div>
-          </Link>
-
-          <div className="flex gap-5 md:hidden items-center">
-            <Link href={"/get-started"}>
-              <button className="bg-white font-semibold text-primary px-4 py-3 text-[20px] rounded-full">
-                Get Started
-              </button>
-            </Link>
-            <div
-              onClick={() => setShowDrop(!showDrop)}
-              className="flex relative  text-white bg-transparent gap-2 border-2 border-white px-4 py-2 rounded-full cursor-pointer"
-            >
-              <p className="text-[20px] p-0 font-semibold">Partner with us</p>
-              <HiChevronDown size={24} />
-
-              {showDrop && (
-                <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
-                  {dropDown.map((item, i) => {
-                    return (
-                      <Link href={item.link} className="text-[16px] " key={i}>
-                        {item.title}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="hidden md:block">
-            <div onClick={()=> setShowNav(!showNav)}>
-              {
-                !showNav
-                  ?
-                  <RiMenuLine className="text-white" size={30} />
-                  :
-                  <HiX className="text-white" size={30} />
-              }
-            </div>
-
-            {
-              showNav
-              &&
-              <Nav />
-            }
-
-
-          </div>
-
-        </div>
+        <MainNav />
 
         <div className="flex flex-col mt-[15vh] md:mt-[5vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
