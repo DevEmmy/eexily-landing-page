@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState, useRef } from "react";
-import { HiChevronDown } from "react-icons/hi";
+import { HiChevronDown, HiX } from "react-icons/hi";
 import Typewriter from 'typewriter-effect';
 
 import { motion, useInView, useScroll } from "framer-motion";
@@ -26,6 +26,8 @@ const Banner = () => {
   const [showDrop, setShowDrop] = useState(false);
 
   const slideRef = useRef(null);
+
+  const [showNav, setShowNav] = useState(false)
 
   return (
     <div className="bg-primary relative h-[130vh] md:h-[500px]">
@@ -73,7 +75,7 @@ const Banner = () => {
             repeat: Infinity,
           },
         }}
-        className="absolute z-[99] top-[70vh] md:top-[10vh] md:size-[30px] right-[10%]"
+        className="absolute z-[99] top-[70vh] md:top-[13vh] md:size-[30px] right-[10%]"
       >
         <img src="./star.png" alt="" className="" />
       </motion.div>
@@ -115,9 +117,23 @@ const Banner = () => {
           </div>
 
           <div className="hidden md:block">
-            <RiMenuLine className="text-white" size={30} />
+            <div onClick={()=> setShowNav(!showNav)}>
+              {
+                !showNav
+                  ?
+                  <RiMenuLine className="text-white" size={30} />
+                  :
+                  <HiX className="text-white" size={30} />
+              }
+            </div>
 
-            <Nav />
+            {
+              showNav
+              &&
+              <Nav />
+            }
+
+
           </div>
 
         </div>

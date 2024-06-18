@@ -25,7 +25,7 @@ const Hero = () => {
 
 
   return (
-    <div className="bg-[#F2F8FF] px-[10%] md:px-[5.7%] grid grid-cols-4 py-10 justify-center items-center">
+    <div className="bg-[#F2F8FF] px-[10%] md:px-[5.7%] grid grid-cols-4 py-10 justify-between gap-5 items-center">
       {items.map((item, i) => {
         return (
           <HeroItem key={i} image={item.image} text={item.text} index={i} />
@@ -58,7 +58,7 @@ const HeroItem: FC<{ image: string; text: string; index: number }> = ({
       className="flex flex-col items-center justify-center"
     >
       <img src={image} alt="" className="size-[30px] object-contain" />
-      <p className="w-2/3 font-light text-center text-[20px] text-xs md:w-full ">{text}</p>
+      <p className="w-2/3 font-light text-center md:text-[8px] text-xs md:w-full ">{text}</p>
     </motion.div>
   );
 };
