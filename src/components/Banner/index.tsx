@@ -12,12 +12,12 @@ const Banner = () => {
   
 
   return (
-    <div className="bg-primary relative h-[130vh] md:h-[500px]">
+    <div className="bg-primary relative h-[130vh] md:h-[540px]">
 
       <img
         src="./wirl.png"
         alt=""
-        className="absolute w-full opacity mix-blend-soft-light h-[150vh] md:h-[500px] object-cover"
+        className="absolute w-full opacity mix-blend-soft-light h-[150vh] md:h-[540px] object-cover"
       />
       <img
         src="./girls.png"
@@ -28,7 +28,7 @@ const Banner = () => {
       <img
         src="./girls-mobile.png"
         alt=""
-        className="absolute h-fit hidden md:block w-[98%] left-[2%] bottom-0  object-cover"
+        className="absolute h-[270px] hidden md:block w-[98%] left-[2%] bottom-0  object-cover"
       />
 
 
@@ -66,7 +66,7 @@ const Banner = () => {
         <MainNav />
 
         <div className="flex flex-col mt-[15vh] md:mt-[5vh] w-full m-auto gap-32">
-          <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold">
+          <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold md:gap-2">
             <p className="text-[30px] md:text-[14px]">Are you tired of gas hassles too?</p>
             <h2
 
