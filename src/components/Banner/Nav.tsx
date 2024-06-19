@@ -31,7 +31,7 @@ const Nav = () => {
         <div className='hidden md:block absolute top-0 left-0 bg-white z-[100] shadow-xl min-w-1/2 rounded-r-3xl'>
             <div className='p-5'>
                 <div className="logo">
-                    <Image src={"/./logo2.png"} width={20} height={20} alt='logo' />
+                    <Image src={"/./blue-logo.png"} width={20} height={20} alt='logo' />
                     <p className='text-[20px] font-semibold'>Eexily</p>
                 </div>
 
