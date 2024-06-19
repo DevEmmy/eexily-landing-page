@@ -28,7 +28,7 @@ const Banner = () => {
       <img
         src="./girls-mobile.png"
         alt=""
-        className="absolute h-[270px] hidden md:block w-[98%] left-[2%] bottom-0  object-cover"
+        className="absolute h-[270px] hidden md:block w-[98%] left-[1%] bottom-0  object-cover"
       />
 
 
