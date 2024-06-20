@@ -63,7 +63,7 @@ const Banner = () => {
       </motion.div>
 
       <div className="absolute z-10 w-full px-[5.7%] py-10">
-        <MainNav />
+        <MainNav showGetStarted={true} />
 
         <div className="flex flex-col mt-[15vh] md:mt-[5vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold md:gap-2">
