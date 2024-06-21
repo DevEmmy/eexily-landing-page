@@ -17,7 +17,7 @@ const Banner = () => {
       <img
         src="./wirl.png"
         alt=""
-        className="absolute w-full opacity mix-blend-soft-light h-[150vh] md:h-[540px] object-cover"
+        className="absolute w-full opacity mix-blend-soft-light md:h-[540px] object-cover"
       />
       <img
         src="./girls.png"

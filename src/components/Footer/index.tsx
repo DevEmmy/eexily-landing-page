@@ -10,7 +10,7 @@ const Footer = () => {
       sub: [
         {
           title: "About",
-          link: "/"
+          link: "/about"
         },
         {
           title: "Services",
@@ -70,7 +70,7 @@ const Footer = () => {
     <div className='bg-primary relative mt-48 text-white grid md:flex md:flex-col grid-cols-5 md:grid-cols-none gap-10 items-start justify-between px-[5.6%] pt-32 pb-10'>
 
       <div className="absolute -top-20 w-2/3 md:w-[90%] bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%] md:left-[5%]">
-        <Image unoptimized width={0} height={0} src="/./mp.png" alt="" className='size-[100px] object-cover'/>
+        <Image unoptimized width={0} height={0} src="/./mp.png" alt="" className='size-[100px] object-cover' />
 
         <div className="flex gap-5 md:flex-col ">
           <div className="flex flex-col gap-2 md:gap-0">
@@ -78,13 +78,18 @@ const Footer = () => {
             <p className="text-sm">Subscribe to get timely updates and newsletter </p>
           </div>
 
-          <input
-            type="email"
-            name=""
-            placeholder="E-mail address"
-            id=""
-            className="bg-input p-3 text-lg md:text-sm rounded-xl focus:outline-none w-[38%] md:w-full"
-          />
+          <div className='flex md:flex-col md:gap-3'>
+            <input
+              type="email"
+              name=""
+              placeholder="E-mail address"
+              id=""
+              className="bg-input p-3 text-lg md:text-sm rounded-l-xl focus:outline-none md:rounded-xl md:w-full"
+            />
+            <button className='bg-primary text-white font-semibold px-3 py-2 rounded-r-xl md:rounded-xl md:px-3 md:w-fit'>
+              Subscribe
+            </button>
+          </div>
         </div>
 
       </div>

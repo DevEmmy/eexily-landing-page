@@ -23,6 +23,10 @@ const MainNav = ({showGetStarted = false}: Props) => {
           title: "Gas Station Partner",
           link: "/gas-station-partner"
         },
+        {
+          title: "Investment Partner",
+          link: "/investment-partner"
+        },
       ];
     
       const [showDrop, setShowDrop] = useState(false);
