@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { RiBikeLine, RiCarLine, RiGasStationLine, RiHome2Line } from 'react-icons/ri'
+import { RiBikeLine, RiCarLine, RiGasStationLine, RiHome2Line, RiShakeHandsLine } from 'react-icons/ri'
 import logo from "@/../public/blue-logo.png"
+import { title } from 'process'
 
 const Nav = () => {
 
@@ -26,6 +27,11 @@ const Nav = () => {
             title: "Gas Station Partner",
             icon: <RiGasStationLine />,
             link: "/gas-station-partner"
+        },
+        {
+            title: "Investment Partner",
+            icon: <RiShakeHandsLine />,
+            link: "/investment-partner"
         }
     ]
     return (
