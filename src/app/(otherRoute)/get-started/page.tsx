@@ -1,5 +1,7 @@
+"use client"
 import Banner2 from "@/components/Banner/Banner2";
-import React, { FC } from "react";
+import WaitlistModal from "@/components/Waitist";
+import React, { FC, useEffect, useState } from "react";
 import { RiAppStoreFill, RiGooglePlayFill } from "react-icons/ri";
 
 interface iTestimony {
@@ -10,6 +12,18 @@ interface iTestimony {
 }
 
 const page = () => {
+  const [showModal, setModal] = useState(false)
+
+  
+
+  useEffect(()=>{
+    if (showModal) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+  },[showModal])
+
   const items = [
     {
       text: "Easy Ordering",
@@ -65,7 +79,7 @@ const page = () => {
           Track your usage, get reminders, and never run out again!
         </p>
 
-        <div className="grid grid-cols-2 gap-10 items-center justify-center text-white download mt-10 md:mt-2">
+        <div className="grid grid-cols-2 gap-10 items-center justify-center text-white download mt-10 md:mt-2" onClick={()=> setModal(true)}>
           <div className="bg-primary w-[180px] cursor-pointer justify-center items-center">
             <img src="./Playstore Icon.png" alt="" className="size-[32px] md:size-[26px]" />
             <div>
@@ -119,6 +133,10 @@ const page = () => {
           );
         })}
       </div>
+
+      {
+        showModal && <WaitlistModal />
+      }
     </div>
   );
 };

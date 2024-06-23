@@ -88,3 +88,16 @@ p{
 .logo{
   @apply flex gap-2 items-center py-5
 }
+
+.modal__overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply fixed top-0 left-0 h-[100vh] w-full flex items-center justify-center
+}
+
+.waitlist-form > div{
+  @apply flex flex-col text-start text-xs gap-1
+}
+
+.waitlist-form > div > input{
+  @apply border p-3  w-full bg-input
+}
