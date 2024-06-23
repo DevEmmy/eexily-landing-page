@@ -1,13 +1,14 @@
 "use client"
 import React, { useEffect } from 'react'
 import { useForm, ValidationError } from '@formspree/react';
+import toast from 'react-hot-toast';
 
 const page = () => {
     const [state, handleSubmit] = useForm("xyzggjkl");
 
     useEffect(()=>{
         if (state.succeeded) {
-            
+            toast.success("Thanks for signing up")
         }
     }, [state])
     return (
