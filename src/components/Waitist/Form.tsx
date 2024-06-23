@@ -16,7 +16,7 @@ const Form = () => {
                         <>
                             <p className='font-bold text-[20px] text-primary'>Join Waitlist</p>
 
-                            <form action="" className='grid grid-cols-2 md:grid-cols-none waitlist-form gap-5'>
+                            <form action="" className='grid grid-cols-2 md:flex flex-col waitlist-form gap-5'>
                                 <div>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" />
@@ -41,7 +41,7 @@ const Form = () => {
                         <>
                             <img src="./success.png" alt="" />
                             <p className='font-bold text-[20px] text-primary'>Successful</p>
-                            <p className='w-2/3'>You have been succssfully added to our waitlist and would be notified once the app is available to download</p>
+                            <p className='w-2/3 md:w-full'>You have been succssfully added to our waitlist and would be notified once the app is available to download</p>
                             <p><Link href="/" className='text-primary'>Click here</Link> to go back home</p>
                         </>
             }
