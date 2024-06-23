@@ -7,7 +7,7 @@ const Form = () => {
 
     return (
         <>
-            <div className='bg-white p-10 flex flex-col items-center justify-center gap-2 text-center'>
+            <div className='bg-white p-10 flex flex-col items-center justify-center gap-2 text-center md:w-[90%]'>
                 {
                     !showSuccess
 
@@ -16,7 +16,7 @@ const Form = () => {
                         <>
                             <p className='font-bold text-[20px] text-primary'>Join Waitlist</p>
 
-                            <form action="" className='grid grid-cols-2 waitlist-form gap-5'>
+                            <form action="" className='grid grid-cols-2 md:grid-cols-none waitlist-form gap-5'>
                                 <div>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" />

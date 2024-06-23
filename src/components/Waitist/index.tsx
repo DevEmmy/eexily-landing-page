@@ -12,7 +12,7 @@ const WaitlistModal = () => {
 
                     ?
 
-                    <div className='bg-white p-5 flex flex-col items-center justify-center gap-2 text-center'>
+                    <div className='bg-white p-5 flex flex-col items-center justify-center gap-2 text-center md:w-[90%]'>
                         <img src="./waitlist.png" alt="" />
                         <p className='font-bold text-[20px]'>Our Super app will be live soon</p>
                         <p className='w-2/3'>
