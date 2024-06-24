@@ -37,7 +37,7 @@ const page = () => {
 
                 <div>
                     <p>Expiry Date<sup>*</sup></p>
-                    <input type="text" name="expiryDate" />
+                    <input type="date" name="expiryDate" />
                 </div>
 
                 <p className='col-span-2 font-bold'>

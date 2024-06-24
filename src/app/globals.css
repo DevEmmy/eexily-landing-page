@@ -101,3 +101,8 @@ p{
 .waitlist-form > div > input{
   @apply border p-3  w-full bg-input
 }
+
+.overlay__nav{
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply w-full h-[100vh] fixed top-0 left-0
+}

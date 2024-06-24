@@ -5,7 +5,7 @@ import { RiBikeLine, RiCarLine, RiGasStationLine, RiHome2Line, RiShakeHandsLine 
 import logo from "@/../public/blue-logo.png"
 import { title } from 'process'
 
-const Nav = () => {
+const Nav = ({setShowNav}: any) => {
 
     const navItems = [
         {
@@ -46,7 +46,7 @@ const Nav = () => {
                     {
                         navItems.map((item, i) => {
                             return (
-                                <Link href={item.link} key={i} className='flex gap-3 items-center text-[12px] hover:text-primary'>
+                                <Link href={item.link} onClick={()=> setShowNav(false)} key={i} className='flex gap-3 items-center text-[12px] hover:text-primary'>
                                     {item.icon}
                                     <p>{item.title}</p>
                                 </Link>

@@ -63,7 +63,7 @@ const MainNav = ({showGetStarted = false}: Props) => {
               <HiChevronDown size={24} />
 
               {showDrop && (
-                <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3">
+                <div className="absolute top-14 border-[rgba(255,255,255,0.5)] border-2 bg-[#7db5ff51] rounded-md p-3 w-full -left-0 flex flex-col gap-3 z-[99]">
                   {dropDown.map((item, i) => {
                     return (
                       <Link href={item.link} className="text-[16px] " key={i}>
@@ -90,7 +90,10 @@ const MainNav = ({showGetStarted = false}: Props) => {
             {
               showNav
               &&
-              <Nav />
+              <>
+                <Nav setShowNav={setShowNav}/>
+                <div className="overlay__nav" onClick={()=> setShowNav(false)}/>
+              </>
             }
 
 
