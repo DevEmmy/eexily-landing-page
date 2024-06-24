@@ -56,9 +56,9 @@ const Nav = () => {
                 </div>
             </div>
 
-            <div className='flex bg-[#FFF] items-center justify-center py-10 rounded-br-3xl px-5'>
+            <div className='flex bg-[#FFF] items-center justify-center pb-20 rounded-br-3xl px-5'>
                 <Link href={"/get-started"}>
-                    <button className='py-3 px-5 rounded-md text-white font-bold text-[12px] bg-primary w-full'>Get Started</button>
+                    <button className='py-3 px-10 rounded-md text-white font-bold text-[12px] bg-primary w-full'>Get Started</button>
                 </Link>
             </div>
 

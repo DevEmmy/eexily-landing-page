@@ -12,7 +12,7 @@ const Banner = () => {
   
 
   return (
-    <div className="bg-primary relative h-[130vh] md:h-[540px]">
+    <div className="bg-primary relative h-[120vh] md:h-[540px]">
 
       <img
         src="./wirl.png"
@@ -65,7 +65,7 @@ const Banner = () => {
       <div className="absolute z-10 w-full px-[5.7%] py-10">
         <MainNav showGetStarted={true} />
 
-        <div className="flex flex-col mt-[15vh] md:mt-[5vh] w-full m-auto gap-32">
+        <div className="flex flex-col mt-[10vh] md:mt-[5vh] w-full m-auto gap-32">
           <div className="text-white flex items-center justify-center flex-col  text-center m-auto font-bold md:gap-2">
             <p className="text-[30px] md:text-[14px]">Are you tired of gas hassles too?</p>
             <h2
