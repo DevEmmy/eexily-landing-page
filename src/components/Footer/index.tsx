@@ -67,7 +67,7 @@ const Footer = () => {
     }
   ]
   return (
-    <div className='bg-primary relative mt-48 text-white grid md:flex md:flex-col grid-cols-5 md:grid-cols-none gap-10 items-start justify-between px-[5.6%] pt-32 pb-10'>
+    <div className='bg-primary relative mt-48 text-white grid md:flex md:flex-col grid-cols-5 md:grid-cols-none gap-10 items-start justify-between px-[5.6%] pt-44 pb-10'>
 
       <div className="absolute -top-20 w-2/3 md:w-[90%] bg-white shadow-custom rounded-3xl pr-10 flex gap-5 justify-between text-black items-center py-3 left-[16.67%] md:left-[5%]">
         <Image unoptimized width={0} height={0} src="/./mp.png" alt="" className='size-[100px] object-cover' />
