@@ -1,0 +1,12 @@
+.nav-bar{
+    background-color: red;
+    width: 100%;
+    padding: 5px 0;
+    top: 0;
+    position: sticky;
+}
+
+.nav{
+    position: absolute;
+    left: 0px
+}

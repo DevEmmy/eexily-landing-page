@@ -1,0 +1,59 @@
+#flip .wrapper{
+  font-size: 64px;
+  width: 230px;
+  height: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+#flip .words{
+  position: absolute  ;
+  top: 0;
+  width: 100%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+#flip .words p{
+  display: block;
+  color: yellow;
+  font-size: 32px;
+  font-weight: 900;
+  user-select: none;
+  animation: rotate 6s infinite ease-in-out;
+ 
+}
+
+@keyframes rotate{
+  10% {
+    transform: translateY(-108%);
+  }
+
+  25% {
+    transform: translateY(-100%);
+  }
+
+  35% {
+    transform: translateY(-208%);
+  } 
+  
+  50% {
+    transform: translateY(-200%);
+  } 
+  
+  60% {
+    transform: translateY(-308%);
+  } 
+  
+  75% {
+    transform: translateY(-300%);
+  } 
+  
+  85% {
+    transform: translateY(-408%);
+  } 
+  
+  100% {
+    transform: translateY(-400%);
+  } 
+}

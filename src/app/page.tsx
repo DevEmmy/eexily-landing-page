@@ -52,15 +52,15 @@ const page = () => {
       <Banner />
        <Hero /> 
 
-      <div className="flex md:flex-col  mx-[5.7%] py-40 justify-around relative md:gap-5">
+      <div className="flex md:flex-col  mx-[5.7%] py-10 justify-around relative md:gap-5">
         <img src="./px.png" alt="" className="absolute left-0 bottom-0" />
         <motion.div
           ref={struggleRef}
           animate={{
             x: isStruggleInView ? "0%" : "-20%",
-            opacity: !isStruggleInView ? "0" : "1",
+            opacity: !isStruggleInView ? "0.2" : "1",
             transition: {
-              duration: 1,
+              duration: 0.4,
               ease: "easeOut",
             },
           }}
