@@ -38,9 +38,18 @@ const MainNav = ({showGetStarted = false}: Props) => {
   return (
     <div className="flex items-center justify-between">
           <Link href={"/"}>
-            <div className="flex gap-3 w-fit items-center">
-              <Image unoptimized width={0} height={0} src="/./logo.png" alt="" className="md:w-[24px] object-cover height-[40px] w-full" />
-              <p className="text-[42px] md:text-[20px] text-white font-semibold">Eexily</p>
+            <div className="flex gap-3 w-fit items-center"><div className="flex items-center md:gap-2 gap-1">
+  <Image
+    unoptimized
+    width={0}
+    height={0}
+    src="/./logo.png"
+    alt=""
+    className="md:w-[29px] w-[40px] h-[40px] object-cover"
+  />
+  <p className="text-[42px] md:text-[20px] text-white font-semibold">Eexily</p>
+</div>
+
             </div>
           </Link>
 
